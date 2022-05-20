@@ -1,0 +1,32 @@
+<mat-toolbar color="primary">
+
+  <span>Web App Using Angular CRUD</span>
+  <span class="example-spacer"></span>
+  <span class="fill-remaining-space">
+    <button
+      mat-raised-button
+      [matMenuTriggerFor]="menu"
+      #menuTrigger="matMenuTrigger"
+      (mouseover)="menuTrigger.openMenu()"
+      color="warn"
+    >
+      Register
+    </button>
+    <mat-menu #menu="matMenu" [overlapTrigger]="false">
+      <span (mouseleave)="menuTrigger.closeMenu()">
+        <button mat-menu-item>
+          <span>Student</span>
+        </button>
+        <button mat-menu-item>
+          <span>Class</span>
+        </button>
+        <button mat-menu-item>
+          <span>Course</span>
+        </button>
+        <button mat-menu-item>
+          <span>Test</span>
+        </button>
+      </span>
+    </mat-menu>
+  </span>
+</mat-toolbar>
