@@ -1,8 +1,8 @@
 <mat-toolbar color="primary">
 
-  <span>Web App Using Angular CRUD</span>
-  <span class="example-spacer"></span>
-  <span class="fill-remaining-space">
+    <span>Web App Using Angular CRUD</span>
+    <span class="example-spacer"></span>
+    <span class="fill-remaining-space">
     <button
       mat-raised-button
       [matMenuTriggerFor]="menu"
@@ -14,19 +14,21 @@
     </button>
     <mat-menu #menu="matMenu" [overlapTrigger]="false">
       <span (mouseleave)="menuTrigger.closeMenu()">
-        <button mat-menu-item>
+        <button mat-menu-item routerLink="/student">
           <span>Student</span>
-        </button>
-        <button mat-menu-item>
+    </button>
+    <button mat-menu-item routerLink="/class">
           <span>Class</span>
         </button>
-        <button mat-menu-item>
+    <button mat-menu-item routerLink="/course">
           <span>Course</span>
         </button>
-        <button mat-menu-item>
+    <button mat-menu-item routerLink="/test">
           <span>Test</span>
         </button>
-      </span>
+    </span>
     </mat-menu>
-  </span>
+    </span>
 </mat-toolbar>
+<app-student></app-student>
+<app-class></app-class>
