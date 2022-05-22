@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { StudentService } from 'src/app/services/student.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
@@ -24,6 +24,7 @@ export class StudentComponent implements OnInit {
   dataSource!: MatTableDataSource<any>;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
+
   constructor(
     private studentApi: StudentService,
     private studentDialog: MatDialog
@@ -53,6 +54,19 @@ export class StudentComponent implements OnInit {
       data: row
     });
   }
+
+  deleteStudent(id: number) {
+    this.studentApi.deleteStudent(id).subscribe({
+      next: (res) => {
+        alert('Student deleted succesfully.');
+      },
+      error: (err) => {
+        alert('Delete unsuccesfull');
+      },
+    });
+    this.getAllStudent();
+  }
+
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();

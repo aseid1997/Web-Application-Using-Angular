@@ -7,15 +7,6 @@
       "class": "12",
       "section": "B",
       "telephone": "45678900",
-      "id": 1
-    },
-    {
-      "firstName": "Abdu",
-      "lastName": "Seid",
-      "sex": "Female",
-      "class": "12",
-      "section": "B",
-      "telephone": "45678900",
       "id": 2
     },
     {
@@ -27,7 +18,6 @@
       "telephone": "45678900",
       "id": 3
     }
-
   ],
   "class": [
     {

@@ -10,6 +10,9 @@ import { TestComponent } from './test/test.component';
 import { StudentDialogComponent } from './student-dialog/student-dialog.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CourseDialogComponent } from './course-dialog/course-dialog.component';
+import { ClassDialogComponent } from './class-dialog/class-dialog.component';
+import { TestDialogComponent } from './test-dialog/test-dialog.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { HttpClientModule } from '@angular/common/http';
     CourseComponent,
     TestComponent,
     StudentDialogComponent,
+    CourseDialogComponent,
+    ClassDialogComponent,
+    TestDialogComponent,
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>Add Student</h1>
+<div mat-dialog-content >
+  <form [formGroup]="classForm">
+    <mat-form-field appearance="outline">
+      <mat-label>Class Number</mat-label>
+      <input formControlName="classNumber" matInput placeholder="Class Number">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Section</mat-label>
+      <input formControlName="section" matInput placeholder="Section">
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-action [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close class="btn-close"> Close</button>
+  <button  mat-raised-button color="primary" class="btn-save"  (click)="addClass()"> {{actionBtn}}</button>
+</div>

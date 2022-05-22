@@ -16,12 +16,11 @@
       <span (mouseleave)="menuTrigger.closeMenu()">
         <!-- <button mat-menu-item routerLink="/student"> -->
           <!-- <span>Student</span> -->
-          <button mat-menu-item (click)="openDialog()">Student</button>
+          <button mat-menu-item (click)="openStudentDialog()">Student</button>
+          <button mat-menu-item (click)="openClassDialog()">Class</button>
 
     <!-- </button> -->
-    <button mat-menu-item routerLink="/class">
-          <span>Class</span>
-        </button>
+
     <button mat-menu-item routerLink="/course">
           <span>Course</span>
         </button>
