@@ -14,9 +14,11 @@
     </button>
     <mat-menu #menu="matMenu" [overlapTrigger]="false">
       <span (mouseleave)="menuTrigger.closeMenu()">
-        <button mat-menu-item routerLink="/student">
-          <span>Student</span>
-    </button>
+        <!-- <button mat-menu-item routerLink="/student"> -->
+          <!-- <span>Student</span> -->
+          <button mat-menu-item (click)="openDialog()">Student</button>
+
+    <!-- </button> -->
     <button mat-menu-item routerLink="/class">
           <span>Class</span>
         </button>
@@ -30,5 +32,6 @@
     </mat-menu>
     </span>
 </mat-toolbar>
+
 <app-student></app-student>
 <app-class></app-class>

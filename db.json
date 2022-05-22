@@ -1,0 +1,52 @@
+{
+  "student": [
+    {
+      "firstName": "Abdu",
+      "lastName": "Seid",
+      "sex": "Female",
+      "class": "12",
+      "section": "B",
+      "telephone": "45678900",
+      "id": 1
+    },
+    {
+      "firstName": "Abdu",
+      "lastName": "Seid",
+      "sex": "Female",
+      "class": "12",
+      "section": "B",
+      "telephone": "45678900",
+      "id": 2
+    },
+    {
+      "firstName": "Abdu",
+      "lastName": "Seid",
+      "sex": "Female",
+      "class": "12",
+      "section": "B",
+      "telephone": "45678900",
+      "id": 3
+    }
+
+  ],
+  "class": [
+    {
+      "id": 1,
+      "classNumber": 1,
+      "classSection": ""
+    }
+  ],
+  "course": [
+    {
+      "id": 1,
+      "courseName": "",
+      "courseCode": ""
+    }
+  ],
+  "test": [
+    {
+      "id": 1,
+      "result": 1
+    }
+  ]
+}
