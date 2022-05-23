@@ -2,6 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ClassService } from 'src/app/services/class.service';
+import { CourseService } from 'src/app/services/course.service';
 import { ClassDialogComponent } from '../class-dialog/class-dialog.component';
 
 @Component({
@@ -11,38 +12,38 @@ import { ClassDialogComponent } from '../class-dialog/class-dialog.component';
 })
 export class CourseDialogComponent implements OnInit {
 
-  classForm!:  FormGroup;
+  courseForm!:  FormGroup;
 
   data: any;
 
   constructor(
     private formBuilder: FormBuilder,
-    private classApi: ClassService,
+    private courseApi: CourseService,
     @Inject(MAT_DIALOG_DATA) public editData: any,
     private dialogRef: MatDialogRef<ClassDialogComponent>
   ) {}
 
   actionBtn: string = 'Save';
   ngOnInit(): void {
-    this.classForm = this.formBuilder.group({
-      classNumber: ['', Validators.required],
-      section: ['', Validators.required],
+    this.courseForm = this.formBuilder.group({
+      courseName: ['', Validators.required],
+      courseCode: ['', Validators.required],
     });
 
     if (this.editData) {
       this.actionBtn = 'Update';
-      this.classForm.controls['classNumber'].setValue(this.editData.classNumber);
-      this.classForm.controls['section'].setValue(this.editData.section);
+      this.courseForm.controls['courseName'].setValue(this.editData.CourseName);
+      this.courseForm.controls['courseCode'].setValue(this.editData.courseCode);
     }
   }
 
-  addClass() {
+  addCourse(){
     if (!this.editData) {
-      if (this.classForm.valid) {
-        this.classApi.postClass(this.classForm.value).subscribe({
+      if (this.courseForm.valid) {
+        this.courseApi.postCourse(this.courseForm.value).subscribe({
           next: (res) => {
-            alert('class added successfuly');
-            this.classForm.reset();
+            alert('Course added successfuly');
+            this.courseForm.reset();
             this.dialogRef.close('save');
           },
           error: () => {
@@ -51,21 +52,21 @@ export class CourseDialogComponent implements OnInit {
         });
       }
     } else {
-      this.updateclass();
+      this.updateCourse();
     }
   }
 
-  updateclass() {
-    this.classApi
-      .putClass(this.classForm.value, this.editData.id)
+  updateCourse() {
+    this.courseApi
+      .putCourse(this.courseForm.value, this.editData.id)
       .subscribe({
         next: (res) => {
-          alert('class updated succesfully.');
-          this.classForm.reset();
+          alert('Course updated succesfully.');
+          this.courseForm.reset();
           this.dialogRef.close('Update');
         },
         error: (err) => {
-          alert('class update unsuccesful!');
+          alert('Course update unsuccesful!');
         },
       });
   }
