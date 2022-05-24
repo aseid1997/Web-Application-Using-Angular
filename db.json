@@ -7,6 +7,15 @@
       "class": "12",
       "section": "B",
       "telephone": "45678900",
+      "id": 1
+    },
+    {
+      "firstName": "Abdu",
+      "lastName": "Seid",
+      "sex": "Female",
+      "class": "12",
+      "section": "B",
+      "telephone": "45678900",
       "id": 2
     },
     {
@@ -21,14 +30,20 @@
   ],
   "class": [
     {
-      "classNumber": "11",
-      "section": "A",
-      "id": 2
+      "id": 1,
+      "classNumber": 12,
+      "section": "dsjdhakjshfghksjhg"
+    },
+    {
+      "id": 2,
+      "classNumber": 11,
+      "section": "dsnbfjsghdjvfd"
     }
   ],
   "course": [
     {
       "id": 1,
+<<<<<<< HEAD
       "courseName": "",
       "courseCode": ""
     },
@@ -36,6 +51,25 @@
       "courseName": "fdgsfgdfg",
       "courseCode": "dfgfdgdfgdfg",
       "id": 2
+=======
+      "courseName": "bashjbdhjsbfs",
+      "courseCode": "dsjdhakjshfghksjhg"
+    },
+    {
+      "id": 2,
+      "courseName": "absjhfgsjdf",
+      "courseCode": "dsnbfjsghdjvfd"
+    },
+    {
+      "courseName": "sjdfsakf",
+      "courseCode": "dslkflsdkfklds",
+      "id": 3
+    },
+    {
+      "courseName": "jsdfkjdhfg",
+      "courseCode": "sdjfkjsdngkjdg",
+      "id": 4
+>>>>>>> 2e843a7f14a7329270e6146712b8f692d39cec6a
     }
   ],
   "test": [

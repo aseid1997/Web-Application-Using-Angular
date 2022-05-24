@@ -16,7 +16,6 @@ export class ClassComponent implements OnInit {
   displayedColumns: string[] = [
     'classNumber',
     'section',
-
     'action',
   ];
   dataSource!: MatTableDataSource<any>;
