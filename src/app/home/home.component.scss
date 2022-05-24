@@ -1,4 +1,11 @@
 .example-spacer {
     flex: 1 1 auto;
-  }
-  :focus {outline:0 !important;}
+}
+
+ :focus {
+    outline: 0 !important;
+}
+
+.view {
+    margin-right: 15px;
+}

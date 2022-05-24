@@ -1,44 +1,17 @@
-<h1 mat-dialog-title>Add Student</h1>
-<div mat-dialog-content >
-  <form [formGroup]="classForm">
-    <mat-form-field appearance="outline">
-      <mat-label>First Name</mat-label>
-      <input formControlName="firstName" matInput placeholder="First Name">
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>Last Name</mat-label>
-      <input formControlName="lastName" matInput placeholder="Last Name">
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>Sex</mat-label>
-      <mat-select formControlName="sex" placeholder="Sex">
-        <mat-option value="Male" >Male</mat-option>
-        <mat-option value="Female">Female</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>Class</mat-label>
-      <mat-select formControlName="class" placeholder="Class">
-        <mat-option value="11" >11</mat-option>
-        <mat-option value="12">12</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>Section</mat-label>
-      <mat-select formControlName="section" placeholder="Section">
-        <mat-option value="A" >A</mat-option>
-        <mat-option value="B">B</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <mat-form-field class="example-full-width" appearance="outline">
-      <mat-label>Telephone</mat-label>
-      <span matPrefix>+251 &nbsp;</span>
-      <input formControlName="telephone" type="tel" matInput placeholder="555-555-234">
-    </mat-form-field>
-
-  </form>
+<h1 mat-dialog-title>Add Course</h1>
+<div mat-dialog-content>
+    <form [formGroup]="courseForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Course Name</mat-label>
+            <input formControlName="courseName" matInput placeholder="Course Name">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Course Code</mat-label>
+            <input formControlName="courseCode" matInput placeholder="Course Code ">
+        </mat-form-field>
+    </form>
 </div>
 <div mat-dialog-action [align]="'end'">
-  <button mat-raised-button color="warn" mat-dialog-close class="btn-close"> Close</button>
-  <button  mat-raised-button color="primary" class="btn-save"  (click)="addClass()"> {{actionBtn}}</button>
+    <button mat-raised-button color="warn" mat-dialog-close class="btn-close"> Close</button>
+    <button mat-raised-button color="primary" class="btn-save" (click)="addCourse()"> {{actionBtn}}</button>
 </div>
