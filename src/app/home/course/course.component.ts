@@ -14,9 +14,8 @@ import { CourseDialogComponent } from '../course-dialog/course-dialog.component'
 export class CourseComponent implements OnInit {
 
   displayedColumns: string[] = [
-    'classNumber',
-    'section',
-
+    'courseName',
+    'courseCode',
     'action',
   ];
   dataSource!: MatTableDataSource<any>;
@@ -41,7 +40,7 @@ export class CourseComponent implements OnInit {
         console.log(res);
       },
       error: (err) => {
-        alert('Oops! Error while fetching a class data!');
+        alert('Oops! Error while fetching a Course data!');
       },
     });
   }
@@ -56,7 +55,7 @@ export class CourseComponent implements OnInit {
   deleteCourse(id: number) {
     this.courseApi.deleteCourse(id).subscribe({
       next: (res) => {
-        alert('class deleted succesfully.');
+        alert('Course deleted succesfully.');
       },
       error: (err) => {
         alert('Delete unsuccesfull');
@@ -73,6 +72,5 @@ export class CourseComponent implements OnInit {
       this.dataSource.paginator.firstPage();
     }
   }
-
 
 }

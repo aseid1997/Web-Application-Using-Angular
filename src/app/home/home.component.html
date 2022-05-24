@@ -2,34 +2,41 @@
 
     <span>Web App Using Angular CRUD</span>
     <span class="example-spacer"></span>
-    <span class="fill-remaining-space">
+    <div class="fill-remaining-space">
+    <button
+      mat-raised-button
+      [matMenuTriggerFor]="view"
+      #menuTrigger="matMenuTrigger"
+      color="warn" class="view"
+    >
+      View
+    </button>
+    <mat-menu #view="matMenu" [overlapTrigger]="false">
+      <span >
+
+          <button mat-menu-item routerLink="/student">View Student</button>
+          <button mat-menu-item routerLink="/class">View Class</button>
+          <button mat-menu-item routerLink="/course">View Course</button>
+    </span>
+    </mat-menu>
+    </div>
+    <div class="fill-remaining-space">
     <button
       mat-raised-button
       [matMenuTriggerFor]="menu"
       #menuTrigger="matMenuTrigger"
-      (mouseover)="menuTrigger.openMenu()"
       color="warn"
     >
       Register
     </button>
     <mat-menu #menu="matMenu" [overlapTrigger]="false">
       <span (mouseleave)="menuTrigger.closeMenu()">
-        <!-- <button mat-menu-item routerLink="/student"> -->
-          <!-- <span>Student</span> -->
+
           <button mat-menu-item (click)="openStudentDialog()">Student</button>
           <button mat-menu-item (click)="openClassDialog()">Class</button>
           <button mat-menu-item (click)="openCourseDialog()">Course</button>
-
-    <!-- </button> -->
-
-
-    <button mat-menu-item routerLink="/test">
-          <span>Test</span>
-        </button>
     </span>
     </mat-menu>
-    </span>
+  </div>
 </mat-toolbar>
 
-<app-student></app-student>
-<app-class></app-class>

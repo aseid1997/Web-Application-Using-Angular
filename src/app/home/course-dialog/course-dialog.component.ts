@@ -1,9 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { ClassService } from 'src/app/services/class.service';
 import { CourseService } from 'src/app/services/course.service';
-import { ClassDialogComponent } from '../class-dialog/class-dialog.component';
 
 @Component({
   selector: 'app-course-dialog',
@@ -20,7 +18,7 @@ export class CourseDialogComponent implements OnInit {
     private formBuilder: FormBuilder,
     private courseApi: CourseService,
     @Inject(MAT_DIALOG_DATA) public editData: any,
-    private dialogRef: MatDialogRef<ClassDialogComponent>
+    private dialogRef: MatDialogRef<CourseDialogComponent>
   ) {}
 
   actionBtn: string = 'Save';
@@ -32,12 +30,12 @@ export class CourseDialogComponent implements OnInit {
 
     if (this.editData) {
       this.actionBtn = 'Update';
-      this.courseForm.controls['courseName'].setValue(this.editData.CourseName);
+      this.courseForm.controls['courseName'].setValue(this.editData.courseName);
       this.courseForm.controls['courseCode'].setValue(this.editData.courseCode);
     }
   }
 
-  addCourse(){
+  addCourse() {
     if (!this.editData) {
       if (this.courseForm.valid) {
         this.courseApi.postCourse(this.courseForm.value).subscribe({
@@ -52,11 +50,11 @@ export class CourseDialogComponent implements OnInit {
         });
       }
     } else {
-      this.updateCourse();
+      this.updatecCourse();
     }
   }
 
-  updateCourse() {
+  updatecCourse() {
     this.courseApi
       .putCourse(this.courseForm.value, this.editData.id)
       .subscribe({
@@ -70,6 +68,4 @@ export class CourseDialogComponent implements OnInit {
         },
       });
   }
-
-
 }

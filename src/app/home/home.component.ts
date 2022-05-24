@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ClassDialogComponent } from './class-dialog/class-dialog.component';
 import { CourseDialogComponent } from './course-dialog/course-dialog.component';
+// import { CourseDialogComponent } from './course-dialog/course-dialog.component';
 import { StudentDialogComponent } from './student-dialog/student-dialog.component';
 
 @Component({
