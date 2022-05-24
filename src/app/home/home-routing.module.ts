@@ -8,23 +8,10 @@ import { TestComponent } from './test/test.component';
 
 
 const routes: Routes = [
-<<<<<<< HEAD
-  {
-    path: '', 
-    children: [
-      { path: 'student', component: StudentComponent },
-      { path: 'class', component: ClassComponent },
-      { path: 'course', component: CourseComponent },
-      { path: 'test', component: TestComponent },
-
-    ]
-  }
-=======
   { path: 'student', component: StudentComponent },
   { path: 'class', component: ClassComponent },
   { path: 'course', component: CourseComponent },
   { path: 'test', component: TestComponent },
->>>>>>> 2e843a7f14a7329270e6146712b8f692d39cec6a
 
 ];
 
