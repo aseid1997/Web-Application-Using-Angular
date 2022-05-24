@@ -1,17 +1,17 @@
 <h1 mat-dialog-title>Add Course</h1>
-<div mat-dialog-content >
-  <form [formGroup]="courseForm">
-    <mat-form-field appearance="outline">
-      <mat-label>Cours Name</mat-label>
-      <input formControlName="courseName" matInput placeholder="Course Name">
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-      <mat-label>Course Code</mat-label>
-      <input formControlName="courseCode" matInput placeholder="Course Code">
-    </mat-form-field>
-  </form>
+<div mat-dialog-content>
+    <form [formGroup]="courseForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Cours Name</mat-label>
+            <input formControlName="courseName" matInput placeholder="Course Name">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Course Code</mat-label>
+            <input formControlName="courseCode" matInput placeholder="Course Code">
+        </mat-form-field>
+    </form>
 </div>
 <div mat-dialog-action [align]="'end'">
-  <button mat-raised-button color="warn" mat-dialog-close class="btn-close"> Close</button>
-  <button  mat-raised-button color="primary" class="btn-save"  (click)="addCourse()"> {{actionBtn}}</button>
+    <button mat-raised-button color="warn" mat-dialog-close class="btn-close"> Close</button>
+    <button mat-raised-button color="primary" class="btn-save" (click)="addCourse()"> {{actionBtn}}</button>
 </div>

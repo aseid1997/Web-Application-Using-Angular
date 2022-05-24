@@ -3,40 +3,30 @@
     <span>Web App Using Angular CRUD</span>
     <span class="example-spacer"></span>
     <div class="fill-remaining-space">
-    <button
-      mat-raised-button
-      [matMenuTriggerFor]="view"
-      #menuTrigger="matMenuTrigger"
-      color="warn" class="view"
-    >
+        <button mat-raised-button [matMenuTriggerFor]="view" #menuTrigger="matMenuTrigger" color="warn" class="view">
       View
     </button>
-    <mat-menu #view="matMenu" [overlapTrigger]="false">
-      <span >
+        <mat-menu #view="matMenu" [overlapTrigger]="false">
+            <span>
 
           <button mat-menu-item routerLink="/student">View Student</button>
           <button mat-menu-item routerLink="/class">View Class</button>
           <button mat-menu-item routerLink="/course">View Course</button>
     </span>
-    </mat-menu>
+        </mat-menu>
     </div>
     <div class="fill-remaining-space">
-    <button
-      mat-raised-button
-      [matMenuTriggerFor]="menu"
-      #menuTrigger="matMenuTrigger"
-      color="warn"
-    >
+        <button mat-raised-button [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger" color="warn">
       Register
     </button>
-    <mat-menu #menu="matMenu" [overlapTrigger]="false">
-      <span (mouseleave)="menuTrigger.closeMenu()">
+        <mat-menu #menu="matMenu" [overlapTrigger]="false">
+            <span (mouseleave)="menuTrigger.closeMenu()">
 
           <button mat-menu-item (click)="openStudentDialog()">Student</button>
           <button mat-menu-item (click)="openClassDialog()">Class</button>
           <button mat-menu-item (click)="openCourseDialog()">Course</button>
     </span>
-    </mat-menu>
-  </div>
+        </mat-menu>
+    </div>
 </mat-toolbar>
 <router-outlet></router-outlet>
