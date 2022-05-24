@@ -30,7 +30,7 @@ export class StudentComponent implements OnInit {
     private studentDialog: MatDialog
   ) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {console.log("inside student")
     this.getAllStudent();
   }
 

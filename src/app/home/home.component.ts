@@ -11,7 +11,9 @@ import { StudentDialogComponent } from './student-dialog/student-dialog.componen
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog) {
+    console.log("inside home")
+  }
 
   openStudentDialog() {
     this.dialog.open(StudentDialogComponent, {
