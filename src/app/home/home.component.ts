@@ -29,14 +29,6 @@ export class HomeComponent implements OnInit {
       width: '50%',
     });
   }
-<<<<<<< HEAD
-  openTestDialog() {
-    this.dialog.open(TestDialogComponent, {
-      width: '50%',
-    });
-  }
-=======
->>>>>>> 2e843a7f14a7329270e6146712b8f692d39cec6a
 
   ngOnInit(): void {}
 }
